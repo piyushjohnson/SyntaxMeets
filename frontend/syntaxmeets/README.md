@@ -66,3 +66,39 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Linting Setup
+
+-   Install all development dependencies globally
+
+```bash
+npm i -D eslint \
+        # Eslint itself
+         prettier \
+         # Prettier itself
+         eslint-plugin-react \
+         # Eslint plugin for react
+         eslint-plugin-react-hooks \
+         # Eslint plugin for react hooks, helps you write modern functional react components
+         eslint-config-prettier \
+         # Eslint config for prettier, it will extend the style guide to match prettier
+         eslint-plugin-prettier \
+         # Eslint plugin for prettier, it will raise eslint errors about formatting
+         eslint-plugin-jsx-a11y
+```
+
+-   Check these config files `.eslintrc.js` and `.prettierrc`
+-   Check scripts defined at `package.json`
+
+```javascript
+"scripts": {
+    "lint": "...",
+    "format": "..."
+  }
+```
+
+-   For linting project
+
+```bash
+npm run lint
+```
